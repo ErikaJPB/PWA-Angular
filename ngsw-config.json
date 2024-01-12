@@ -12,6 +12,9 @@
           "/manifest.webmanifest",
           "/*.css",
           "/*.js"
+        ],
+        "urls": [
+          "https://fonts.googleapis.com/**"
         ]
       }
     },
@@ -24,6 +27,20 @@
           "/assets/**",
           "/*.(svg|cur|jpg|jpeg|png|apng|webp|avif|gif|otf|ttf|woff|woff2)"
         ]
+      }
+    }
+  ],
+  "dataGroups": [
+    {
+      "name": "Phrases_Api",
+      "urls": [
+        "https://api.quotable.io/random"
+      ],
+      "cacheConfig": {
+        "strategy": "freshness",
+        "maxAge": "1h",
+        "maxSize": 20,
+        "timeout": "5s"
       }
     }
   ]
